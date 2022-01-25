@@ -1,0 +1,101 @@
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+}
+
+.total {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.full-price {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-bottom: 0.5px solid grey;
+}
+
+.minimum {
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.minimum p {
+  margin-top: 0.5rem;
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #dc0029;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #f53054;
+  color: white;
+}
+
+.actions .button--alt {
+  color: #ffffff;
+}
+
+.actions .button {
+  background-color: #dc0029;
+  color: white;
+}
+
+.actions .button:hover,
+.actions .button:active {
+  background-color: #f53054;
+}
+
+.slider {
+  margin: 20px auto;
+  width: 70% !important;
+}
+
+.slider-value {
+  margin-top: 10px;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.points {
+  margin-top: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.order {
+  color: #ffffff;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .actions button {
+    margin-top: 1rem;
+  }
+}

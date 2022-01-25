@@ -1,0 +1,72 @@
+.card {
+  margin: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  display: flex;
+  width: 22rem;
+  height: 15rem;
+  opacity: 1;
+  cursor: pointer;
+  background-size: cover;
+}
+
+.tab1cards {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.2s;
+  margin-left: 17rem;
+}
+
+.tab1cards :hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  color: white !important ;
+  direction: rtl;
+  text-align: center;
+  width: 100%;
+  margin-top: 180px;
+  pointer-events: none;
+}
+
+.card1 {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdLK8TTJlIVMREQpkGTVwY4aa9Rx9hJiO1rw&usqp=CAU");
+}
+
+.card2 {
+  background-image: url("https://www.nafis.co.il/wp-content/uploads/2020/07/nafis_button2020.jpg");
+}
+
+.card3 {
+  background-image: url("https://img.mako.co.il/2018/11/15/pizza_afik_i.jpg");
+}
+
+.card4 {
+  background-image: url("https://s1.kikar.co.il/th/data/auto/nadm/bj/vdb185v2__w650h439q95.jpg");
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    margin: 1.5rem auto;
+    height: 12rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    display: flex;
+    width: auto;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .card h3 {
+    margin-top: 100px;
+    color: red;
+  }
+
+  .tab1cards {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+}

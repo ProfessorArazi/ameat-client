@@ -1,0 +1,92 @@
+.page {
+  text-align: center;
+  background-image: url(../../assets/contact.jpg);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(100, 100, 75, 0.7) 0%,
+      rgba(100, 100, 75, 0.7) 100%
+    ),
+    url(../../assets/contact.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  margin: 3rem auto 5rem;
+  height: 90vh;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.form {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 3vh;
+  color: white;
+  display: inline-block;
+}
+.input {
+  margin-right: 1rem;
+}
+
+.control {
+  margin: 3rem 0;
+}
+
+.control label {
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+.control input {
+  font: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 14rem;
+  max-width: 100%;
+}
+
+.feedback {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.label {
+  font-size: 4vh;
+}
+
+.invalid label {
+  color: red;
+}
+
+.invalid input,
+.invalid textarea {
+  border-color: #aa0b20;
+  background-color: #ffeff1;
+}
+
+.button {
+  width: 100%;
+  color: #ffffff !important;
+  font-size: 20px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .page {
+    width: 80%;
+    padding-top: 0;
+  }
+  .control {
+    margin-top: 20px;
+  }
+  .control label {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .form {
+    margin-top: 50px;
+  }
+}

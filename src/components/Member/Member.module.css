@@ -1,0 +1,63 @@
+.form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "GveretLevin";
+  text-align: center;
+  padding-bottom: 2rem;
+  margin-bottom: 30px;
+}
+
+.button {
+  color: #000;
+  font-weight: bold !important;
+  width: 98%;
+  margin: 5px 0 0 4px;
+}
+
+.not-member {
+  text-align: left;
+  font-weight: 600;
+  font-size: 15px;
+  padding-top: 10px;
+  color: #eeb544;
+  margin: 0;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px black;
+}
+
+.control input {
+  border-radius: 50px;
+  margin: 1rem 0;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+.control input::placeholder {
+  text-align: right;
+}
+
+.loading {
+  text-align: center;
+}
+
+.errorDes {
+  margin-left: 200px;
+}
+
+.invalid input {
+  border: 1.5px solid #dc3545;
+  background-color: #ffeff1;
+}
+
+@media (max-width: 768px) {
+  .control input {
+    width: 70%;
+  }
+
+  .button {
+    width: 66%;
+    margin-left: 3.1rem;
+  }
+}

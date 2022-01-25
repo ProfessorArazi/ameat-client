@@ -1,0 +1,62 @@
+.gift-card {
+  margin: 1rem auto 3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  display: flex;
+  width: 22rem;
+  height: 15rem;
+  opacity: 1;
+  cursor: pointer;
+  background-image: url("../../assets/birthdayMeal.jpg");
+  background-size: cover;
+}
+
+.no-gifts {
+  margin: 1rem auto 3rem;
+  width: 22rem;
+  height: 15rem;
+}
+
+.tabcards {
+  display: flex;
+  flex-direction: row;
+  direction: rtl;
+  transition: transform 0.2s;
+}
+
+.tabcards :hover {
+  transform: scale(1.03);
+}
+
+.gift-card h3 {
+  color: white !important ;
+  direction: rtl;
+  text-align: center;
+  width: 100%;
+  margin-top: 1px;
+  pointer-events: none;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  .gift-card {
+    height: 18rem;
+  }
+
+  .gift-card h3 {
+    margin-top: 100px;
+  }
+
+  .no-gifts {
+    height: 20rem;
+  }
+
+  .tabcards {
+    display: block;
+    width: 100%;
+  }
+}

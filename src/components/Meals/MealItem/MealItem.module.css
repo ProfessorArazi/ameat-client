@@ -1,0 +1,47 @@
+.meal {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  text-align: right;
+}
+
+.meal h2 {
+  margin: 0 0 0.25rem 0;
+  font-family: "GveretLevin";
+}
+
+.description {
+  font-style: italic;
+}
+
+.image img {
+  height: 125px;
+  width: 202px;
+}
+
+.price {
+  margin-top: 0.25rem;
+  font-weight: bold;
+  color: #ad5502;
+  font-size: 1.25rem;
+}
+
+.onSale {
+  text-decoration: line-through;
+}
+
+@media only screen and (max-width: 600px) {
+  .image img {
+    width: 125px;
+    height: 77px;
+  }
+  .meal h2 {
+    margin: 0 0 0.75rem 0;
+  }
+
+  .description {
+    font-size: 1.25rem;
+  }
+}
