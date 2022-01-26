@@ -51,6 +51,10 @@
   background-color: #ffeff1;
 }
 
+.hidden-password-bar {
+  visibility: hidden !important;
+}
+
 @media (max-width: 768px) {
   .control input {
     width: 70%;

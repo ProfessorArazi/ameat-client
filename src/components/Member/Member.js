@@ -193,10 +193,15 @@ const Member = (props) => {
                 type="password"
                 placeholder="סיסמה"
               />
-              {password && register && !isSubmitting && (
-                <div>
+
+              <div>
+                {register && !isSubmitting && (
                   <PasswordStrengthBar
-                    password={password}
+                    className={
+                      (!password || password.length === 0) &&
+                      classes["hidden-password-bar"]
+                    }
+                    password={password || ""}
                     barColors={[
                       "#B83E26",
                       "#FFB829",
@@ -206,8 +211,8 @@ const Member = (props) => {
                       "#009200",
                     ]}
                   />
-                </div>
-              )}
+                )}
+              </div>
               {!isSubmitting && (
                 <Button
                   className={classes.button}
