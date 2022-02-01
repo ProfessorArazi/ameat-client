@@ -54,14 +54,3 @@
 .hidden-password-bar {
   visibility: hidden !important;
 }
-
-@media (max-width: 768px) {
-  .control input {
-    width: 70%;
-  }
-
-  .button {
-    width: 66%;
-    margin-left: 3.1rem;
-  }
-}

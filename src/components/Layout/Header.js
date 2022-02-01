@@ -164,21 +164,7 @@ const Header = (props) => {
 
       {window.location.href === "http://localhost:3000/" && (
         <div className={classes.centered}>
-          <h1>
-            {
-              <Typewriter
-                options={{
-                  strings: [
-                    "Hello Everyone",
-                    "My Name Is Amit Arazi",
-                    `I'm A FullStack Web Developer`,
-                  ],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            }
-          </h1>
+          <h1>Ameat</h1>
         </div>
       )}
       <div onClick={hideAllHandler}>{props.children}</div>

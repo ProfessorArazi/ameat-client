@@ -149,9 +149,7 @@ const Member = (props) => {
           onClick={props.onClick}
         >
           <Form onSubmit={memberHandler} className={classes.form}>
-            <h1 className={classes.title}>
-              {register ? "!הצטרפו אלינו" : "התחבר"}
-            </h1>
+            <h1 className={classes.title}>{register ? "!הצטרפו" : "התחבר"}</h1>
 
             {register && (
               <>
