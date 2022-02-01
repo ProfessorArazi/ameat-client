@@ -95,9 +95,15 @@ function App() {
                   <Home />
                 </Suspense>
               </Route>
+
               <Route path="/gifts" exact>
-                <Gifts />
+                {sessionStorage.getItem("token") ? (
+                  <Gifts />
+                ) : (
+                  <Redirect to="/" />
+                )}
               </Route>
+
               <Route path="/contact" exact>
                 <Suspense fallback={<p></p>}>
                   <Contact />
