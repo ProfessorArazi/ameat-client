@@ -4,10 +4,3 @@
   border-radius: 14px;
   background-color: white;
 }
-
-@media (max-width: 768px) {
-  .card {
-    width: 95%;
-    margin: 0 auto;
-  }
-}
