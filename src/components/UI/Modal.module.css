@@ -43,7 +43,9 @@
 @media (min-width: 768px) {
   .modal {
     width: 28rem;
-    left: calc(55% - 20rem);
+
+    text-align: center;
+    left: 30%;
   }
 }
 

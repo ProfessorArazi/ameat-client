@@ -10,6 +10,11 @@ const Contact = React.lazy(() => import("./components/Contact/Contact"));
 const Meals = React.lazy(() => import("./components/Meals/Meals"));
 const Home = React.lazy(() => import("./components/Home/Home"));
 
+/*
+todo:
+1.home page
+*/
+
 function App() {
   const location = useLocation();
   const { pathname } = location;
