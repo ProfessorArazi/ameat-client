@@ -25,17 +25,6 @@ const Footer = () => {
           <div className={classes.logo}>
             <h4>MEATע</h4>
           </div>
-          <div className={classes.social}>
-            <a href="https://www.instagram.com/cristiano/">
-              <i className="icon ion-social-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/leomessi">
-              <i className="icon ion-social-facebook"></i>
-            </a>
-            <a href="https://api.whatsapp.com/send?phone=+972543438551">
-              <i className="icon ion-social-whatsapp"></i>
-            </a>
-          </div>
           <ul className="list-inline">
             <li className="list-inline-item">
               <Link to="/contact">דברו איתנו</Link>
@@ -44,9 +33,7 @@ const Footer = () => {
               <Link to="/">מי אנחנו</Link>
             </li>
           </ul>
-          <p className={classes.copyright}>
-            Professor Arazi © {new Date().getFullYear()}
-          </p>
+          <p className={classes.copyright}>Amit Arazi © 2021</p>
         </footer>
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
