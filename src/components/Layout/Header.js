@@ -162,11 +162,6 @@ const Header = (props) => {
         <Member onClick={() => setExpanded(false)} onClose={hideAllHandler} />
       )}
 
-      {window.location.href === "http://localhost:3000/" && (
-        <div className={classes.centered}>
-          <h1>Ameat</h1>
-        </div>
-      )}
       <div onClick={hideAllHandler}>{props.children}</div>
       {/* {props.image && (
         <>

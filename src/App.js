@@ -13,6 +13,7 @@ const Home = React.lazy(() => import("./components/Home/Home"));
 /*
 todo:
 1.home page
+2.gifts page
 */
 
 function App() {

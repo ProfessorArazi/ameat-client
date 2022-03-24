@@ -10,19 +10,19 @@ const Home = () => {
   return (
     <>
       <Header cartButton={false} image={"home"}>
+        <h1 className={classes.title}>Ameat</h1>
         <div className={classes.tab1cards}>
-          <div
-            onClick={() => history.push("/drinks")}
-            className={classes.card + " " + classes.card1}
-          >
-            <h3>17:00-19:00 Happy Hour</h3>
-          </div>
-
           <div
             onClick={() => history.push("/burgers")}
             className={classes.card + " " + classes.card2}
           >
             <h3>אחד פלוס אחד בימי ראשון!</h3>
+          </div>
+          <div
+            onClick={() => history.push("/drinks")}
+            className={classes.card + " " + classes.card1}
+          >
+            <h3>17:00-19:00 Happy Hour</h3>
           </div>
         </div>
       </Header>
