@@ -27,32 +27,6 @@ function App() {
   const [wrongPath, setWrongPath] = useState();
 
   useEffect(() => {
-    const paths = [
-      "/",
-      "/burgers",
-      "/stakes",
-      "/shnitzels",
-      "/addones",
-      "/drinks",
-      "/contact",
-      "/gifts",
-    ];
-    if (!paths.includes(pathname)) {
-      document.title = "404";
-      setWrongPath("404");
-      return;
-    } else {
-      if (pathname === "/") {
-        document.title = "עMEAT";
-        setWrongPath(null);
-      } else {
-        document.title = pathname[1].toUpperCase() + pathname.slice(2);
-        setWrongPath(null);
-      }
-    }
-  }, [pathname]);
-
-  useEffect(() => {
     if (openForDeliveries) {
       axios(process.env.REACT_APP_SERVER + "/meals")
         .then((response) => {
@@ -88,6 +62,32 @@ function App() {
         });
     }
   }, [openForDeliveries]);
+
+  useEffect(() => {
+    const paths = [
+      "/",
+      "/burgers",
+      "/stakes",
+      "/shnitzels",
+      "/addones",
+      "/drinks",
+      "/contact",
+      "/gifts",
+    ];
+    if (!paths.includes(pathname)) {
+      document.title = "404";
+      setWrongPath("404");
+      return;
+    } else {
+      if (pathname === "/") {
+        document.title = "עMEAT";
+        setWrongPath(null);
+      } else {
+        document.title = pathname[1].toUpperCase() + pathname.slice(2);
+        setWrongPath(null);
+      }
+    }
+  }, [pathname]);
 
   return (
     <>
