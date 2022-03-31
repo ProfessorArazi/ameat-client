@@ -28,22 +28,6 @@ function App() {
 
   useEffect(() => {
     if (openForDeliveries) {
-      // const loadedMeals = [];
-      // menu.forEach((product) => {
-      //   loadedMeals.push({
-      //     id: product.id,
-      //     name: product.name,
-      //     description: product.description,
-      //     price: product.price,
-      //     image: (
-      //       <img src={product.image.props.src} alt={product.image.props.alt} />
-      //     ),
-      //     group: product.group,
-      //     discount: product.discount,
-      //     twoInOne: product.twoInOne,
-      //     happyHour: product.happyHour,
-      //   });
-      // });
       setMeals(menu);
     }
   }, [openForDeliveries]);
