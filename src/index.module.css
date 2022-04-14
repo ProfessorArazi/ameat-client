@@ -40,5 +40,6 @@ body {
 @media (max-width: 800px) {
   body {
     background-attachment: scroll;
+    background-size: 400vw;
   }
 }

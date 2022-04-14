@@ -1,9 +1,9 @@
-import burgersImage from "../../assets/burgers.jpg";
-import steakImage from "../../assets/steak.jpg";
-import addonesImage from "../../assets/chips.jpg";
-import { Carousel } from "react-responsive-carousel";
+// import burgersImage from "../../assets/burgers.jpg";
+// import steakImage from "../../assets/steak.jpg";
+// import addonesImage from "../../assets/chips.jpg";
+// import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Typewriter from "typewriter-effect";
+// import Typewriter from "typewriter-effect";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import HeaderCartButton from "./HeaderCartButton";
@@ -56,11 +56,11 @@ const Header = (props) => {
     }
   }, [ctx]);
 
-  const images = {
-    burgers: burgersImage,
-    stakes: steakImage,
-    addones: addonesImage,
-  };
+  // const images = {
+  //   burgers: burgersImage,
+  //   stakes: steakImage,
+  //   addones: addonesImage,
+  // };
 
   return (
     <>
