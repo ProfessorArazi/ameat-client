@@ -212,16 +212,12 @@ const Member = (props) => {
                 onChange={(e) => setPassword(e.target.value)}
                 ref={passwordRef}
                 type="password"
-                placeholder="סיסמה"
+                placeholder={`סיסמה${register ? "-לפחות 2 קוים ירוקים" : ""}`}
               />
 
               <div>
                 {register && !isSubmitting && (
                   <PasswordStrengthBar
-                    className={
-                      (!password || password.length === 0) &&
-                      classes["hidden-password-bar"]
-                    }
                     password={password || ""}
                     barColors={[
                       "#B83E26",
