@@ -5,6 +5,7 @@ import Header from "../Layout/Header";
 import classes from "./Contact.module.css";
 import LoadingSpinner from "../UI/LoadingSpinner";
 import Footer from "../Layout/Footer";
+import validator from "validator";
 
 const Contact = () => {
   document.title = "דברו איתנו!";
@@ -33,12 +34,24 @@ const Contact = () => {
     const email = userEmail || emailInputRef.current.value;
     const message = messageInputRef.current.value;
 
+    let formIsValid = true;
+
+    if (message.trim().length === 0) {
+      setMessageError("לא ניתן לשלוח הודעה ריקה");
+      formIsValid = false;
+    }
+
+    if (!validator.isEmail(email)) {
+      setEmailError("אימייל לא חוקי");
+      formIsValid = false;
+    }
+
+    if (!formIsValid) return;
+
     const messageData = {
       email: email,
       message: message,
     };
-
-    let formIsValid = true;
 
     setIsSubmitting(true);
     await axios
@@ -111,7 +124,7 @@ const Contact = () => {
               controlId="exampleForm.ControlTextarea1"
             >
               <div className={messageControlClasses}>
-                <Form.Label>? מה אתה רוצה </Form.Label>
+                <Form.Label dir="rtl">ההודעה שלך</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={3}

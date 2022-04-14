@@ -4,12 +4,12 @@ import { Form, Button } from "react-bootstrap";
 import { useState, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-// import AmeatContext from "../../store/ameat-context";
 import Modal from "../UI/Modal";
+import validator from "validator";
+import zxcvbn from "zxcvbn";
 import PasswordStrengthBar from "react-password-strength-bar";
 
 const Member = (props) => {
-  // const ctx = useContext(AmeatContext);
   let history = useHistory();
 
   const [register, setRegister] = useState(true);
@@ -56,6 +56,29 @@ const Member = (props) => {
         password: passwordRef.current.value,
       };
       let formIsValid = true;
+
+      if (registerData.fullName.trim().length < 2) {
+        setFullNameError("error");
+        formIsValid = false;
+      }
+
+      if (!registerData.birthday) {
+        setDateError("error");
+        formIsValid = true;
+      }
+
+      if (!validator.isEmail(registerData.email)) {
+        setEmailError("error");
+        formIsValid = false;
+      }
+
+      if (zxcvbn(password).score < 2) {
+        setPasswordError("error");
+        formIsValid = false;
+      }
+
+      if (!formIsValid) return;
+
       setIsSubmitting(true);
       axios
         .post(process.env.REACT_APP_SERVER + "/users", registerData, {
