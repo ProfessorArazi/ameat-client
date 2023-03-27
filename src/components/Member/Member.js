@@ -181,6 +181,7 @@ const Member = (props) => {
                 </Form.Group>
                 <Form.Group className={dateControlClasses}>
                   <Form.Control
+                  className={classes.input}
                     ref={dateRef}
                     type="text"
                     placeholder="יום הולדת"
@@ -208,7 +209,7 @@ const Member = (props) => {
                 onChange={(e) => setPassword(e.target.value)}
                 ref={passwordRef}
                 type="password"
-                placeholder={`סיסמה${register ? "-לפחות 8 תווים" : ""}`}
+                placeholder={`סיסמה${register ? " - לפחות 8 תווים" : ""}`}
               />
 
               <div>
