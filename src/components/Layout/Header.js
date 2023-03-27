@@ -144,7 +144,7 @@ const Header = (props) => {
                   className="ml-auto"
                   onClick={() => {
                     ctx.clearCart();
-                    sessionStorage.removeItem("token");
+                    sessionStorage.clear();
                     hideAllHandler();
                   }}
                   as={Link}
