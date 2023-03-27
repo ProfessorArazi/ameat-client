@@ -182,10 +182,11 @@ const Member = (props) => {
                 <Form.Group className={dateControlClasses}>
                   <Form.Control
                     ref={dateRef}
-                    type="date"
+                    type="text"
+                    placeholder="יום הולדת"
                     onFocus={(e) => {
-                      e.currentTarget.type = "date";
-                      e.currentTarget.focus();
+                      e.target.type = "date";
+                      e.target.focus();
                     }}
                     min="1970-01-01"
                     max={new Date().toISOString().slice(0, 10)}

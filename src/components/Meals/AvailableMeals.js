@@ -23,7 +23,7 @@ const AvailableMeals = (props) => {
           ? a.price - b.price
           : b.happyHour - a.happyHour
       );
-  } else if (day === 1 && food === "burgers") {
+  } else if (day === 0 && food === "burgers") {
     updatedMeals = updatedMeals
       .filter((meal) => meal.group === food)
       .sort((a, b) =>
