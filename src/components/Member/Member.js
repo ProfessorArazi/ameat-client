@@ -6,8 +6,6 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import Modal from "../UI/Modal";
 import validator from "validator";
-import zxcvbn from "zxcvbn";
-import PasswordStrengthBar from "react-password-strength-bar";
 
 const Member = (props) => {
   let history = useHistory();
@@ -72,7 +70,7 @@ const Member = (props) => {
         formIsValid = false;
       }
 
-      if (zxcvbn(password).score < 2) {
+      if (password.trim().length < 8) {
         setPasswordError("error");
         formIsValid = false;
       }
@@ -114,7 +112,6 @@ const Member = (props) => {
               JSON.stringify({ token: res.data.token, ...res.data.user })
             );
             history.push("/");
-            // ctx.updateUser({ userData: res.data.user, token: res.data.token });
           }
         })
         .catch((err) => {
@@ -138,7 +135,6 @@ const Member = (props) => {
             JSON.stringify({ token: res.data.token, ...res.data.user })
           );
           history.push("/");
-          //
         })
         .catch((err) => {
           setIsSubmitting(false);
@@ -186,13 +182,12 @@ const Member = (props) => {
                 <Form.Group className={dateControlClasses}>
                   <Form.Control
                     ref={dateRef}
-                    type="text"
+                    type="date"
                     onFocus={(e) => {
                       e.currentTarget.type = "date";
                       e.currentTarget.focus();
                     }}
                     min="1970-01-01"
-                    placeholder="יום הולדת"
                     max={new Date().toISOString().slice(0, 10)}
                   />
                 </Form.Group>
@@ -212,23 +207,10 @@ const Member = (props) => {
                 onChange={(e) => setPassword(e.target.value)}
                 ref={passwordRef}
                 type="password"
-                placeholder={`סיסמה${register ? "-לפחות 2 קוים ירוקים" : ""}`}
+                placeholder={`סיסמה${register ? "-לפחות 8 תווים" : ""}`}
               />
 
               <div>
-                {register && !isSubmitting && (
-                  <PasswordStrengthBar
-                    password={password || ""}
-                    barColors={[
-                      "#B83E26",
-                      "#FFB829",
-                      "#009200",
-                      "#009200",
-                      "#009200",
-                      "#009200",
-                    ]}
-                  />
-                )}
               </div>
               {!isSubmitting && (
                 <Button

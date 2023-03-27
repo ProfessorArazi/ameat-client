@@ -237,11 +237,11 @@ export const menu = [
   {
     id: "m3",
     name: "!1 + 1 המבורגר",
-    description: "אחד פלוס אחד רק בימי ראשון",
-    price: 62,
+    description: "שני המבורגר טראמפ במחיר של אחד",
+    price: 53,
     image: (
       <img
-        src="https://wolt-menu-images-cdn.wolt.com/menu-images/936d0742-67ad-11ea-be39-0a58647b3719_gdb8833.jpeg"
+        src="https://wolt-menu-images-cdn.wolt.com/menu-images/5bf18ad4e88d79000a325668/5ec50736-3801-11eb-afff-6e4389a2d717_img_1818.jpeg"
         alt="!1 + 1 המבורגר"
       />
     ),
