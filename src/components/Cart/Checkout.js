@@ -51,8 +51,8 @@ const Checkout = (props) => {
     const enteredApartment = apartmentInputRef.current.value;
     const enteredHome = homeInputRef.current.value;
     const enteredComments = commentsInputRef.current.value;
-    const enteredEmail = localStorage.getItem("user")
-      ? JSON.parse(localStorage.getItem("user")).email
+    const enteredEmail = sessionStorage.getItem("token")
+      ? JSON.parse(sessionStorage.getItem("token")).email
       : emailInputRef.current.value;
 
     const enteredNameIsValid = !checkoutData.isEmpty(enteredName);
@@ -62,7 +62,7 @@ const Checkout = (props) => {
     const enteredApartmentIsValid =
       checkoutData.isValidApartment(enteredApartment);
     const enteredHomeIsValid = !checkoutData.isEmpty(enteredHome);
-    const enteredEmailIsValid = localStorage.getItem("user")
+    const enteredEmailIsValid = sessionStorage.getItem("token")
       ? true
       : checkoutData.isValidMail(enteredEmail);
 
@@ -142,7 +142,7 @@ const Checkout = (props) => {
             <label htmlFor="phone">טלפון</label>
             <input dir="ltr" ref={phoneInputRef} type="text" id="phone" />
           </div>
-          {!localStorage.getItem("user") && (
+          {!sessionStorage.getItem("token") && (
             <div className={emailControlClasses}>
               <label htmlFor="email">מייל</label>
               <input dir="ltr" ref={emailInputRef} type="text" id="email" />
