@@ -203,6 +203,7 @@ const Checkout = (props) => {
             </datalist>
           </div>
           <div dir="rtl" className={classes.control}>
+            <div className={classes["row-inputs"]}>
             <input
               ref={homeInputRef}
               placeholder="בית"
@@ -213,6 +214,7 @@ const Checkout = (props) => {
               placeholder="דירה"
               className={apartmentControlClasses}
             />
+            </div>
             <textarea
               ref={commentsInputRef}
               dir="rtl"

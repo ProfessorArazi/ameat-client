@@ -17,16 +17,25 @@
 }
 
 .control input,
-.control select {
+.control select,
+.control textarea {
   font: inherit;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 10rem;
+  width: 70%;
   max-width: 100%;
 }
 
 .control select {
   height: 30px;
+}
+
+.row-inputs {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  margin: 1rem auto;
+  gap: 1rem;
 }
 
 .actions {
@@ -83,15 +92,13 @@
 }
 
 .small-input {
-  width: 19% !important;
   height: 45px;
   text-align: center;
-  margin: 0.5rem;
 }
 
 .comments {
   display: block;
-  margin: 1rem auto;
+  margin: 0 auto;
   border-radius: 4px;
 }
 
@@ -125,7 +132,5 @@
   .actions button {
     margin: 0.7rem;
   }
-  .small-input {
-    width: 25% !important;
-  }
+
 }
